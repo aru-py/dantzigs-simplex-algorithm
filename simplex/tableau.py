@@ -12,20 +12,20 @@ from .exceptions import UnboundedProblem
 
 class Tableau:
     """
-    Simplex Tableau contains and performs basic operations such as pivoting
+    `Simplex Tableau` contains and performs basic operations such as pivoting
     on the problem data.
 
     There is one primary use case for this class, which is employed by the
     `Solver` class:
 
     1. Intialize Tableau (see `__init__()`) with program data in **standard
-    form**.
+       form**.
     2. Open Tableau as a Context Manager and operate on it using the
-    `pivot()` method.
+       `pivot()` method.
     3. The pivot method will raise an exception once a termination point
-    has been reached (optimality, unboundedness, or infeasibility).
-    4. Extract Tableua data by directly accessing its attributes (see
-    below).
+       has been reached (optimality, unboundedness, or infeasibility).
+    4. Extract Tableau data by directly accessing its attributes (see
+       below).
 
     Attributes
     ----------
