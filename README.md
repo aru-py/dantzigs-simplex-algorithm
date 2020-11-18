@@ -1,6 +1,5 @@
 # dantzigs-simplex-algorithm
-This is an Python implementation of the [Simplex Algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm) used in [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming). The program requires specification of the objective function, technological coefficients, and the constraints of a linear programming problem and outputs the optimal solution and objective value (if any). 
-The simplex tableau is used for calculations, and the steps to solve a problem can be printed.
+This is an Python implementation of the [Simplex Algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm) used in [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming). The program requires specification of the objective function, technological coefficients, and the constraints of a linear programming problem and outputs the optimal solution and objective value (if any).
 
 
 ## Features
@@ -61,4 +60,4 @@ z*=38.0,
 x*=[4.0, 10.0, 20.0]
 ```
 ## Contributing
-Contributions are highly welcome. If you fix a bug, or wish to implement a new feature, open a pull request!
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome. Please make sure to adhere to the code style and add sufficient documenation.
