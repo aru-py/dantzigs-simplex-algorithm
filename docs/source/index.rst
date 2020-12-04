@@ -10,7 +10,8 @@ Welcome to dantzigs-simplex-algorithm's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   tableau
+   quickstart
+   reference
 
 
 
