@@ -1,6 +1,5 @@
 # dantzigs-simplex-algorithm
-This is an Python implementation of the [Simplex Algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm) used in [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming), a subset of Operations Research. The program requires specification of the objective function, technological coefficients, and the constraints, and outputs the optimal solution and objective value (if any). 
-The simplex tableau is used for calculations, and the steps to solve a problem can be printed.
+This is an Python implementation of the [Simplex Algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm) used in [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming). The program requires specification of the objective function, technological coefficients, and the constraints of a linear programming problem and outputs the optimal solution and objective value (if any).
 
 
 ## Features
@@ -27,8 +26,6 @@ solver = SimplexSolver(obj_func=problem['obj_func'],
 # run solver
 sol = solver.solve(use_blands_rule=False,
                    print_tableau=True)
-
-print(sol)
 ```
 
 #### Output
@@ -50,15 +47,17 @@ x2  [ 0.  1.  0.  0.  1. 10.]
 ```
 ```
 [2] Pivoted around (1, 0)
-      1x   2x   3x   4x   5x  RHS 
-z   [ 0.   0.   0.   1.   2.  38. ]
-x3  [ 0.   0.   1.  -0.5  2.5 20. ]
-x1  [ 1.   0.   0.   0.5 -0.5  4. ]
-x2  [ 0.   1.   0.   0.   1.  10. ]
+      1x  2x  3x  4x  5x  RHS 
+z   [ 0.  0.  0.  1.  2.  38.]
+x3  [ 0.  0.  1. -.5  2.5 20.]
+x1  [ 1.  0.  0.  .5 -0.5  4.]
+x2  [ 0.  1.  0.  0.  1.  10.]
 ```
 
 ```
-Solution: z*=38.0, x*=[4.0, 10.0, 20.0]
+Solution: 
+z*=38.0, 
+x*=[4.0, 10.0, 20.0]
 ```
 ## Contributing
-Contributions are highly welcome. If you fix a bug, or wish to implement a new feature, open a pull request!
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome. Please make sure to adhere to the code style and add sufficient documenation.
