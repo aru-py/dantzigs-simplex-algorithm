@@ -1,5 +1,7 @@
 # dantzigs-simplex-algorithm
-This is an Python implementation of the [Simplex Algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm) used in [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming). The program requires specification of the objective function, technological coefficients, and the constraints of a linear programming problem and outputs the optimal solution and objective value (if any).
+[![Documentation Status](https://readthedocs.org/projects/dantzigs-simplex-algorithm/badge/?version=latest)](https://dantzigs-simplex-algorithm.readthedocs.io/en/latest/?badge=latest)
+
+This is an Python implementation of the [Simplex Algorithm](https://en.wikipedia.org/wiki/Simplex_algorithm) used in [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming). The program requires specification of the objective function, technological coefficients, and the constraints of a linear programming problem and outputs the optimal solution and objective value (if any). The documentation is available [here](https://dantzigs-simplex-algorithm.readthedocs.io/en/latest/).
 
 
 ## Features
@@ -7,7 +9,7 @@ This is an Python implementation of the [Simplex Algorithm](https://en.wikipedia
 - Bland's Rule for anti-cycling
 - Two-Phase Method
 - Supports infeasible and unbounded problems
-- Extensive documentation
+- Extensive [documentation](https://dantzigs-simplex-algorithm.readthedocs.io/en/latest/]
 
 
 ## Usage
@@ -60,4 +62,4 @@ z*=38.0,
 x*=[4.0, 10.0, 20.0]
 ```
 ## Contributing
-All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome. Please make sure to adhere to the code style and add sufficient documenation.
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome. Please make sure to adhere to the code style and add sufficient documentation.
