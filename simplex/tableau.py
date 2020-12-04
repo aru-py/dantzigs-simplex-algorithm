@@ -43,7 +43,6 @@ class Tableau:
         determines entering and departing variables and pivots tableau.
     """
 
-    # todo phase 1 or phase 2?
 
     def __init__(self, obj_func: List[float], coeffs: List[List[float]], constraints: List[float]):
         """
@@ -270,7 +269,6 @@ class Tableau:
             if var in self.artificial_vars:
                 if self.tab[v][-1] > 0:
                     raise InfeasibleProblem
-                # todo keep in basis and test this
 
         # drop artificial variables
         drop_cols = self.artificial_vars

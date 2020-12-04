@@ -35,7 +35,7 @@ class SimplexSolver:
            size *n* (n = number of variables).
         coeffs: values of technological coefficients (params), row-major.
           Must be size *m x n* (m = number of constraints)
-        constraints: values of the contraint column-vector (right-hand
+        constraints: values of the constraint column-vector (right-hand
         side). Must be size *m*.
         """
 
@@ -53,18 +53,12 @@ class SimplexSolver:
         if m > n:
             raise LinearlyDependentError
 
-        # todo need these?
-        self.obj_func = obj_func
-        self.coeffs = coeffs
-        self.constraints = constraints
-
         # create corresponding tableau
         self.tableau = Tableau(
-            obj_func=self.obj_func,
-            coeffs=self.coeffs,
-            constraints=self.constraints
+            obj_func=obj_func,
+            coeffs=coeffs,
+            constraints=constraints
         )
-
 
     def solve(self, max_iterations=100, use_blands_rule=False, print_tableau=True):
         """
@@ -85,7 +79,6 @@ class SimplexSolver:
                             format='%(message)s',
                             level=logging.DEBUG if print_tableau else logging.INFO)
 
-
         with self.tableau as t:
             # if incomplete basis, use two-phase method
             if -1 in t.basis:
@@ -104,7 +97,6 @@ class SimplexSolver:
                 t.drop_artificial_variables()
                 logging.debug(f'\nPhase II Tableau:')
 
-
             # print starting/phase 2 tableau
             logging.debug(f'{t}\n')
 
@@ -117,7 +109,7 @@ class SimplexSolver:
                 logging.debug(f'{t}\n')  # log tableau
                 iterations += 1
 
-            # resort to bland's rule if necessary
+            # resort to Bland's rule if necessary
             if not use_blands_rule:
                 logging.info("Possible Cycling detected. Resorting to Bland's Rule.")
                 return self.solve(use_blands_rule=True)
@@ -125,14 +117,13 @@ class SimplexSolver:
             # if no solution if found
             raise UnsolvableError(max_iterations)
 
-
         return Solution(state=t.state, basis=t.basis,
                         solution=t.solution, obj_value=t.obj_value)
 
 
 class Solution:
     """
-    Converts Tableau paramaters into a human-readable solution.
+    Converts Tableau parameters into a human-readable solution.
     """
 
     def __init__(self, state: str, obj_value: float,
