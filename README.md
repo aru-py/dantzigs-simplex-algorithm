@@ -9,7 +9,7 @@ This is an Python implementation of the [Simplex Algorithm](https://en.wikipedia
 - Bland's Rule for anti-cycling
 - Two-Phase Method
 - Supports infeasible and unbounded problems
-- Extensive [documentation](https://dantzigs-simplex-algorithm.readthedocs.io/en/latest/]
+- Extensive [documentation](https://dantzigs-simplex-algorithm.readthedocs.io/en/latest/)
 
 
 ## Usage
