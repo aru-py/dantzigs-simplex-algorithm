@@ -21,7 +21,7 @@ Basics
 -------
 If you haven’t already, obtain a copy of the `source code <https://github.com/aru-py/dantzigs-simplex-algorithm>`_ and place the `simplex` package in your working directory. Included in this package are three modules, but only the `solver` module is necessary for high-level usage (See `Digging Deeper` below for a deeper understanding of the program workings). It can be imported as follows.
 ::
-from simplex.solver import SimplexSolver``.
+	from simplex.solver import SimplexSolver
 
 Take the following standard-form Linear Programming problem, which can be found in `test_cases.py`.
 

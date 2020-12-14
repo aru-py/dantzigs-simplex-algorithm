@@ -20,8 +20,8 @@ class SimplexSolver:
 
     Methods
     -------
-    solve(max_iterations=100, use_blands_rule=False) : solves problem and
-    returns `Solution` object
+    solve(max_iterations=100, use_blands_rule=False) : solves problem, yielding
+    a`Solution` object
 
     """
 
